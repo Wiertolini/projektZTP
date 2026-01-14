@@ -1,5 +1,9 @@
 package budzet.prognozy;
 
-public class StrategiaPrognozy {
-    
+import budzet.rdzen.Transakcja;
+import java.util.List;
+
+public interface StrategiaPrognozy {
+    double prognozuj(List<Transakcja> transakcje);
+    String getNazwaStrategii();
 }

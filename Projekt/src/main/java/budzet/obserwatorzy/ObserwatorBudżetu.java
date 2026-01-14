@@ -1,5 +1,7 @@
 package budzet.obserwatorzy;
 
-public class ObserwatorBudżetu {
-    
+import budzet.rdzen.Budżet;
+
+public interface ObserwatorBudżetu {
+    void aktualizuj(Budżet budżet);
 }

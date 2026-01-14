@@ -1,5 +1,6 @@
 package budzet.rdzen;
 
-public class TypTransakcji {
-    
+public enum TypTransakcji {
+    PRZYCHOD,
+    WYDATEK
 }
