@@ -249,25 +249,9 @@ Obsługa dat jest uproszczona
 
 Brak walidacji niektórych danych wejściowych
 
-🚀 Planowane funkcje
-W przyszłych wersjach planujemy dodać:
-
-Zapis i odczyt danych z pliku/JSON
-
-Wsparcie dla różnych walut
-
-Graficzne interfejsy użytkownika (GUI)
-
-Synchronizacja z bankami (API)
-
-Wsparcie dla wielu użytkowników
-
-Aplikacja mobilna
-
-Zaawansowane wykresy i wizualizacje
 
 
-Projekt został opracowany w ramach zajęć Zespołowe Projektowanie Oprogramowania przez zespół 4 osób:
+Projekt został opracowany przez zespół 4 osób:
 
 Jakub Wierciszewski	Moduł odpowiedzialności	Wzorzec projektowy
 Karol Ziemak	Rdzeń systemu	Singleton
