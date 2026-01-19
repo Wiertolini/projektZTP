@@ -15,7 +15,7 @@ public class RaportMiesięczny extends Raport {
     
     @Override
     public void generuj() {
-        System.out.println("\n📊 RAPORT MIESIĘCZNY");
+        System.out.println("\n RAPORT MIESIĘCZNY");
         System.out.println("========================================");
         
         List<Transakcja> transakcje = menedżer.getListaTransakcji();
