@@ -374,7 +374,7 @@ public class InterfejsKonsolowy {
     
     // --- MENU EKSPORTU (ADAPTER) ---
     private static void menuEksport() {
-        runMenu("EKSPORT (Adapter Pattern)", List.of(
+        runMenu("EKSPORT", List.of(
             new Opcja("Eksport do CSV", () -> {
                 InterfejsEksportuCSV eksporter = new AdapterEksportuCSV();
                 eksporter.eksportuj(menedżer.getListaTransakcji());
@@ -385,7 +385,7 @@ public class InterfejsKonsolowy {
     }
     
     private static void podglądDanych() {
-        System.out.println("DANE DO EKSPORTU (format CSV):");
+        System.out.println("DANE DO EKSPORTU (CSV):");
         System.out.println("ID;Data;Kategoria;Typ;Kwota");
         for (Transakcja t : menedżer.getListaTransakcji()) {
             System.out.printf("%d;%s;%s;%s;%.2f\n",
