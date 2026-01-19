@@ -1,30 +1,26 @@
 package budzet.prognozy;
 
 import budzet.rdzen.Transakcja;
+import budzet.rdzen.TypTransakcji;
 import java.util.List;
 
 public class ŚredniaProstaPrognoza implements StrategiaPrognozy {
     @Override
     public double prognozuj(List<Transakcja> transakcje) {
-        if (transakcje == null || transakcje.isEmpty()) {
-            return 0;
-        }
+        if (transakcje == null || transakcje.isEmpty()) return 0;
         
         double sumaWydatków = 0;
-        int liczbaWydatków = 0;
+        int licznik = 0;
         
         for (Transakcja t : transakcje) {
-            if (t.getTyp() == budzet.rdzen.TypTransakcji.WYDATEK) {
+            if (t.getTyp() == TypTransakcji.WYDATEK) {
                 sumaWydatków += t.getKwota();
-                liczbaWydatków++;
+                licznik++;
             }
         }
-        
-        return liczbaWydatków > 0 ? sumaWydatków / liczbaWydatków : 0;
+        return licznik > 0 ? sumaWydatków / licznik : 0;
     }
     
     @Override
-    public String getNazwaStrategii() {
-        return "Średnia prosta wydatków";
-    }
+    public String getNazwaStrategii() { return "Średnia arytmetyczna"; }
 }

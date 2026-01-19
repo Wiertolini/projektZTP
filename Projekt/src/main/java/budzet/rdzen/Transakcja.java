@@ -17,16 +17,11 @@ public class Transakcja {
         this.typ = typ;
     }
     
-    // Gettery i settery
     public int getId() { return id; }
     public Date getData() { return data; }
     public double getKwota() { return kwota; }
     public Kategoria getKategoria() { return kategoria; }
     public TypTransakcji getTyp() { return typ; }
     
-    public void setId(int id) { this.id = id; }
-    public void setData(Date data) { this.data = data; }
-    public void setKwota(double kwota) { this.kwota = kwota; }
-    public void setKategoria(Kategoria kategoria) { this.kategoria = kategoria; }
-    public void setTyp(TypTransakcji typ) { this.typ = typ; }
+    public void setId(int id) { this.id = id; } // Setter potrzebny np. przy edycji
 }

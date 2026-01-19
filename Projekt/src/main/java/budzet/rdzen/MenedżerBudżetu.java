@@ -25,12 +25,7 @@ public class MenedżerBudżetu {
     
     public void dodajTransakcję(Transakcja transakcja) {
         listaTransakcji.add(transakcja);
-        sprawdźBudżety();
-    }
-    
-    public void usuńTransakcję(Transakcja transakcja) {
-        listaTransakcji.remove(transakcja);
-        sprawdźBudżety();
+        sprawdźBudżety(); // Automatyczne powiadomienie po zmianie stanu
     }
     
     public void dodajBudżet(Budżet budżet) {
@@ -38,16 +33,8 @@ public class MenedżerBudżetu {
         aktualizujTransakcjeDlaBudżetu(budżet);
     }
     
-    public void usuńBudżet(Budżet budżet) {
-        listaBudżetów.remove(budżet);
-    }
-    
     public void dodajObserwatora(ObserwatorBudżetu obserwator) {
         obserwatorzy.add(obserwator);
-    }
-    
-    public void usuńObserwatora(ObserwatorBudżetu obserwator) {
-        obserwatorzy.remove(obserwator);
     }
     
     private void sprawdźBudżety() {
@@ -62,20 +49,19 @@ public class MenedżerBudżetu {
     private void aktualizujTransakcjeDlaBudżetu(Budżet budżet) {
         List<Transakcja> transakcjeKategorii = new ArrayList<>();
         for (Transakcja t : listaTransakcji) {
-            if (t.getKategoria().equals(budżet.getKategoria())) {
+            if (t.getKategoria().getNazwa().equals(budżet.getKategoria().getNazwa())) {
                 transakcjeKategorii.add(t);
             }
         }
         budżet.setTransakcje(transakcjeKategorii);
     }
     
-    public void powiadomObserwatorów(Budżet budżet) {
+    private void powiadomObserwatorów(Budżet budżet) {
         for (ObserwatorBudżetu obserwator : obserwatorzy) {
             obserwator.aktualizuj(budżet);
         }
     }
     
-    // Gettery
     public List<Transakcja> getListaTransakcji() { return listaTransakcji; }
     public List<Budżet> getListaBudżetów() { return listaBudżetów; }
 }

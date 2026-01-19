@@ -1,9 +1,6 @@
 # 📊 Budżet Domowy - Aplikacja do zarządzania finansami
 
 
-## 🏠 Opis projektu
-
-**Budżet Domowy** to zaawansowana aplikacja konsolowa do zarządzania finansami osobistymi, napisana w Javie z wykorzystaniem wzorców projektowych. Aplikacja umożliwia śledzenie wydatków i przychodów, planowanie budżetów miesięcznych, generowanie raportów oraz prognozowanie przyszłych wydatków.
 
 ### ✨ Kluczowe funkcje
 
@@ -24,33 +21,13 @@
 
 ## 🚀 Jak uruchomić aplikację
 
-### Metoda 1: Użycie IDE (np. IntelliJ IDEA, Eclipse)
+### Użycie IDE (np. IntelliJ IDEA, Eclipse)
 
 1. Otwórz projekt w swoim IDE
 2. Upewnij się, że ścieżka do JDK jest poprawnie skonfigurowana
 3. Znajdź plik `InterfejsKonsolowy.java` w pakiecie `budzet`
 4. Uruchom klasę jako aplikację Java
 
-### Metoda 2: Kompilacja z linii poleceń
-
-```bash
-# Przejdź do katalogu projektu
-cd projektZTP2
-
-# Kompilacja wszystkich plików
-javac -cp src/main/java -d src/main/java src/main/java/budzet/*.java src/main/java/budzet/*/*.java
-
-# Uruchomienie aplikacji
-java -cp src/main/java budzet.InterfejsKonsolowy
-Metoda 3: Użycie Mavena (jeśli dostępny)
-bash
-# Kompilacja
-mvn compile
-
-# Uruchomienie
-mvn exec:java -Dexec.mainClass="budzet.InterfejsKonsolowy"
-📁 Struktura projektu
-text
 projektZTP2/
 ├── README.md
 ├── src/

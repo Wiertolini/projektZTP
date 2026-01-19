@@ -1,50 +1,42 @@
 package budzet.prognozy;
 
 import budzet.rdzen.Transakcja;
+import budzet.rdzen.TypTransakcji;
 import java.util.List;
 
 public class PrognozaTrendowa implements StrategiaPrognozy {
+    private static final int OKNO_ANALIZY = 3;
+    private static final double MAX_WZROST = 0.2; // 20%
+
     @Override
     public double prognozuj(List<Transakcja> transakcje) {
-        if (transakcje == null || transakcje.size() < 2) {
-            return 0;
-        }
+        if (transakcje == null) return 0;
         
-        // Wyodrębniamy tylko wydatki
         List<Transakcja> wydatki = transakcje.stream()
-            .filter(t -> t.getTyp() == budzet.rdzen.TypTransakcji.WYDATEK)
+            .filter(t -> t.getTyp() == TypTransakcji.WYDATEK)
             .toList();
         
-        if (wydatki.size() < 2) {
-            return 0;
-        }
+        if (wydatki.size() < 2) return 0;
         
-        // Obliczamy średnią z ostatnich 3 transakcji
-        int n = Math.min(3, wydatki.size());
+        int n = Math.min(OKNO_ANALIZY, wydatki.size());
         double suma = 0;
-        
         for (int i = wydatki.size() - n; i < wydatki.size(); i++) {
             suma += wydatki.get(i).getKwota();
         }
+        double srednia = suma / n;
         
-        // Prognoza: średnia z ostatnich n transakcji * współczynnik wzrostu (jeśli jest trend)
-        double średnia = suma / n;
-        
-        // Jeśli mamy więcej niż 2 transakcje, obliczamy trend
         if (wydatki.size() >= 3) {
-            Transakcja ostatnia = wydatki.get(wydatki.size() - 1);
-            Transakcja przedostatnia = wydatki.get(wydatki.size() - 2);
-            double trend = (ostatnia.getKwota() - przedostatnia.getKwota()) / przedostatnia.getKwota();
+            double ost = wydatki.get(wydatki.size() - 1).getKwota();
+            double przedOst = wydatki.get(wydatki.size() - 2).getKwota();
             
-            // Prognoza uwzględniająca trend (maksymalnie +20%)
-            return średnia * (1 + Math.min(trend, 0.2));
+            if (przedOst == 0) return srednia; // Zabezpieczenie przed NaN
+            
+            double trend = (ost - przedOst) / przedOst;
+            return srednia * (1 + Math.min(trend, MAX_WZROST));
         }
-        
-        return średnia;
+        return srednia;
     }
     
     @Override
-    public String getNazwaStrategii() {
-        return "Prognoza trendowa wydatków";
-    }
+    public String getNazwaStrategii() { return "Prognoza trendowa (ostatnie 3)"; }
 }
