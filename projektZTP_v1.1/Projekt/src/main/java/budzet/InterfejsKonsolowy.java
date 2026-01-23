@@ -370,26 +370,48 @@ public class InterfejsKonsolowy {
     }
     
     // --- MENU OBSERWATORÓW ---
-    private static void menuObserwatory() {
-        runMenu("MENU OBSERWATORÓW", List.of(
-            new Opcja("Test powiadomień", () -> {
-                System.out.println("Testowanie powiadomień...");
-                // Dodajemy transakcję, która może przekroczyć budżet
-                if (!kategorie.isEmpty()) {
-                    menedżer.dodajTransakcję(new Transakcja(
-                        999, new Date(), 250, kategorie.get(0), TypTransakcji.WYDATEK
-                    ));
-                    System.out.println("Dodano testową transakcję.");
-                    sprawdźPrzekroczenia();
+private static void menuObserwatory() {
+    runMenu("MENU OBSERWATORÓW", List.of(
+        new Opcja("Test powiadomień", () -> {
+            System.out.println("Testowanie powiadomień...");
+
+            if (kategorie.isEmpty()) {
+                System.out.println("Brak kategorii – nie można wykonać testu.");
+                return;
+            }
+
+            // wybieramy ID, które na pewno nie koliduje
+            int testId = menedżer.getListaTransakcji().stream()
+                    .mapToInt(Transakcja::getId)
+                    .max().orElse(0) + 1;
+
+            Transakcja testowa = new Transakcja(
+                    testId, new Date(), 250, kategorie.get(0), TypTransakcji.WYDATEK
+            );
+
+            try {
+                menedżer.dodajTransakcję(testowa);
+                System.out.println("Dodano testową transakcję (ID=" + testId + ").");
+
+                // wywołujemy to, co ma spowodować reakcję/komunikat
+                sprawdźPrzekroczenia();
+            } finally {
+                // usuwamy testową transakcję po teście (żeby nie została na stałe)
+                boolean usunieto = menedżer.getListaTransakcji().removeIf(t -> t.getId() == testId);
+                if (usunieto) {
+                    System.out.println("Usunięto testową transakcję (ID=" + testId + ").");
+                } else {
+                    System.out.println("Nie znaleziono testowej transakcji do usunięcia (ID=" + testId + ").");
                 }
-            }),
-            new Opcja("Informacje o systemie", () -> {
-                System.out.println("SYSTEM OBSERWATORÓW:");
-                System.out.println("Menedżer ma " + menedżer.getListaBudżetów().size() + " budżetów.");
-                System.out.println("Każde przekroczenie budżetu wywołuje powiadomienia.");
-            })
-        ));
-    }
+            }
+        }),
+        new Opcja("Informacje o systemie", () -> {
+            System.out.println("SYSTEM OBSERWATORÓW:");
+            System.out.println("Menedżer ma " + menedżer.getListaBudżetów().size() + " budżetów.");
+            System.out.println("Każde przekroczenie budżetu wywołuje powiadomienia.");
+        })
+    ));
+}
     
     // --- MENU EKSPORTU (ADAPTER) ---
     private static void menuEksport() {
