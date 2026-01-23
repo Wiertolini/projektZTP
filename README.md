@@ -90,7 +90,6 @@ Obsługa programu odbywa się poprzez wybór odpowiednich opcji menu.
 - **Karol Ziemak**- Rdzeń Systemu
 - **Jakub Wierciszewski** - eksport + dokumentacja
 - **Michał Szwabowicz**- Prognozy
-- **Szymon Duchnowski**- Raporty i obserwatorzy
 - **Szymon Duchnowski**- Raporty + obserwatorzy + dokumentacja
 
 
