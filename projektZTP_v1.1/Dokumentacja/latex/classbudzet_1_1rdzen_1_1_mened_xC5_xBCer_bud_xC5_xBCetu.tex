@@ -1,0 +1,88 @@
+\doxysection{budzet.\+rdzen.\+Menedżer\+Budżetu Class Reference}
+\hypertarget{classbudzet_1_1rdzen_1_1_mened_xC5_xBCer_bud_xC5_xBCetu}{}\label{classbudzet_1_1rdzen_1_1_mened_xC5_xBCer_bud_xC5_xBCetu}\index{budzet.rdzen.MenedżerBudżetu@{budzet.rdzen.MenedżerBudżetu}}
+
+
+Centralny menedżer danych aplikacji:\+ transakcji, budżetów i powiadomień.  
+
+
+
+
+Collaboration diagram for budzet.\+rdzen.\+Menedżer\+Budżetu:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classbudzet_1_1rdzen_1_1_mened_xC5_xBCer_bud_xC5_xBCetu__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classbudzet_1_1rdzen_1_1_mened_xC5_xBCer_bud_xC5_xBCetu_ae9cab0ec118dadb9cd13ec32b6fe7092}\label{classbudzet_1_1rdzen_1_1_mened_xC5_xBCer_bud_xC5_xBCetu_ae9cab0ec118dadb9cd13ec32b6fe7092} 
+void {\bfseries dodaj\+Transakcję} (\doxymbox{\hyperlink{classbudzet_1_1rdzen_1_1_transakcja}{Transakcja}} transakcja)
+\item 
+\Hypertarget{classbudzet_1_1rdzen_1_1_mened_xC5_xBCer_bud_xC5_xBCetu_af34135a39418261f9296a291248fb265}\label{classbudzet_1_1rdzen_1_1_mened_xC5_xBCer_bud_xC5_xBCetu_af34135a39418261f9296a291248fb265} 
+void {\bfseries dodaj\+Budżet} (\doxymbox{\hyperlink{classbudzet_1_1rdzen_1_1_bud_xC5_xBCet}{Budżet}} budżet)
+\item 
+void \doxymbox{\hyperlink{classbudzet_1_1rdzen_1_1_mened_xC5_xBCer_bud_xC5_xBCetu_a3b50ba5711b27fb28855c54e0308689f}{dodaj\+Obserwatora}} (\doxymbox{\hyperlink{interfacebudzet_1_1obserwatorzy_1_1_obserwator_bud_xC5_xBCetu}{Obserwator\+Budżetu}} obserwator)
+\begin{DoxyCompactList}\small\item\em Rejestruje obserwatora budżetu (Observer). \end{DoxyCompactList}\item 
+\Hypertarget{classbudzet_1_1rdzen_1_1_mened_xC5_xBCer_bud_xC5_xBCetu_ad5df24f3a2c46868cc43892b9c2f6ff3}\label{classbudzet_1_1rdzen_1_1_mened_xC5_xBCer_bud_xC5_xBCetu_ad5df24f3a2c46868cc43892b9c2f6ff3} 
+List$<$ \doxymbox{\hyperlink{classbudzet_1_1rdzen_1_1_transakcja}{Transakcja}} $>$ {\bfseries get\+Lista\+Transakcji} ()
+\item 
+\Hypertarget{classbudzet_1_1rdzen_1_1_mened_xC5_xBCer_bud_xC5_xBCetu_a12babfe3497086541f2c8c86465f9ec9}\label{classbudzet_1_1rdzen_1_1_mened_xC5_xBCer_bud_xC5_xBCetu_a12babfe3497086541f2c8c86465f9ec9} 
+List$<$ \doxymbox{\hyperlink{classbudzet_1_1rdzen_1_1_bud_xC5_xBCet}{Budżet}} $>$ {\bfseries get\+Lista\+Budżetów} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static synchronized Menedżer\+Budżetu \doxymbox{\hyperlink{classbudzet_1_1rdzen_1_1_mened_xC5_xBCer_bud_xC5_xBCetu_a74dbb89f915dc05558bdd7151aacbd45}{pobierz\+Instancję}} ()
+\begin{DoxyCompactList}\small\item\em Zwraca jedyną instancję menedżera (Singleton). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Centralny menedżer danych aplikacji:\+ transakcji, budżetów i powiadomień. 
+
+Klasa pełni dwie role wzorców:\+
+\begin{DoxyItemize}
+\item Singleton (wzorzec\+\_\+singleton):\+ jedna instancja współdzielona w całej aplikacji.
+\item Subject w Obserwatorze (wzorzec\+\_\+observer):\+ przechowuje obserwatorów i powiadamia o przekroczeniu limitu.
+\end{DoxyItemize}
+
+Udostępnia metody dodawania transakcji i budżetów, a po zmianie stanu automatycznie weryfikuje limity. 
+
+\label{doc-func-members}
+\Hypertarget{classbudzet_1_1rdzen_1_1_mened_xC5_xBCer_bud_xC5_xBCetu_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classbudzet_1_1rdzen_1_1_mened_xC5_xBCer_bud_xC5_xBCetu_a3b50ba5711b27fb28855c54e0308689f}\index{budzet.rdzen.MenedżerBudżetu@{budzet.rdzen.MenedżerBudżetu}!dodajObserwatora@{dodajObserwatora}}
+\index{dodajObserwatora@{dodajObserwatora}!budzet.rdzen.MenedżerBudżetu@{budzet.rdzen.MenedżerBudżetu}}
+\doxysubsubsection{\texorpdfstring{dodajObserwatora()}{dodajObserwatora()}}
+{\footnotesize\ttfamily \label{classbudzet_1_1rdzen_1_1_mened_xC5_xBCer_bud_xC5_xBCetu_a3b50ba5711b27fb28855c54e0308689f} 
+void budzet.\+rdzen.\+Menedżer\+Budżetu.\+dodaj\+Obserwatora (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{interfacebudzet_1_1obserwatorzy_1_1_obserwator_bud_xC5_xBCetu}{Obserwator\+Budżetu}}}]{obserwator}{}\end{DoxyParamCaption})}
+
+
+
+Rejestruje obserwatora budżetu (Observer). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obserwator} & obiekt implementujący {\ttfamily \doxylink{interfacebudzet_1_1obserwatorzy_1_1_obserwator_bud_xC5_xBCetu}{Obserwator\+Budżetu}}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classbudzet_1_1rdzen_1_1_mened_xC5_xBCer_bud_xC5_xBCetu_a74dbb89f915dc05558bdd7151aacbd45}\index{budzet.rdzen.MenedżerBudżetu@{budzet.rdzen.MenedżerBudżetu}!pobierzInstancję@{pobierzInstancję}}
+\index{pobierzInstancję@{pobierzInstancję}!budzet.rdzen.MenedżerBudżetu@{budzet.rdzen.MenedżerBudżetu}}
+\doxysubsubsection{\texorpdfstring{pobierzInstancję()}{pobierzInstancję()}}
+{\footnotesize\ttfamily \label{classbudzet_1_1rdzen_1_1_mened_xC5_xBCer_bud_xC5_xBCetu_a74dbb89f915dc05558bdd7151aacbd45} 
+synchronized Menedżer\+Budżetu budzet.\+rdzen.\+Menedżer\+Budżetu.\+pobierz\+Instancję (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Zwraca jedyną instancję menedżera (Singleton). 
+
+\begin{DoxyReturn}{Returns}
+globalna instancja {\ttfamily \doxylink{classbudzet_1_1rdzen_1_1_mened_xC5_xBCer_bud_xC5_xBCetu}{Menedżer\+Budżetu}}. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Projekt/\+src/\+main/\+java/\+budzet/\+rdzen/\+Menedżer\+Budżetu.\+java\end{DoxyCompactItemize}

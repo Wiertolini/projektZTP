@@ -1,0 +1,65 @@
+\doxysection{budzet.\+raporty.\+Fabryka\+Raportów Class Reference}
+\hypertarget{classbudzet_1_1raporty_1_1_fabryka_raport_xC3_xB3w}{}\label{classbudzet_1_1raporty_1_1_fabryka_raport_xC3_xB3w}\index{budzet.raporty.FabrykaRaportów@{budzet.raporty.FabrykaRaportów}}
+
+
+Fabryka tworząca obiekty raportów na podstawie typu żądanego przez użytkownika.  
+
+
+
+
+Collaboration diagram for budzet.\+raporty.\+Fabryka\+Raportów:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{classbudzet_1_1raporty_1_1_fabryka_raport_xC3_xB3w__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classbudzet_1_1raporty_1_1_fabryka_raport_xC3_xB3w_aeec5b853391b55241c05bf1ad9791525}\label{classbudzet_1_1raporty_1_1_fabryka_raport_xC3_xB3w_aeec5b853391b55241c05bf1ad9791525} 
+{\bfseries Fabryka\+Raportów} (\doxymbox{\hyperlink{classbudzet_1_1rdzen_1_1_mened_xC5_xBCer_bud_xC5_xBCetu}{Menedżer\+Budżetu}} menedżer)
+\item 
+\doxymbox{\hyperlink{classbudzet_1_1raporty_1_1_raport}{Raport}} \doxymbox{\hyperlink{classbudzet_1_1raporty_1_1_fabryka_raport_xC3_xB3w_a90d38487ccdff95feee0ab497f71dd91}{utwórz\+Raport}} (String typ, String... parametry)
+\begin{DoxyCompactList}\small\item\em Tworzy raport na podstawie typu podanego przez użytkownika. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Fabryka tworząca obiekty raportów na podstawie typu żądanego przez użytkownika. 
+
+Realizuje wzorzec Fabryka (wzorzec\+\_\+factory). Metoda {\ttfamily utwórz\+Raport(...)} enkapsuluje dobór klasy raportu oraz przekazanie zależności ({\ttfamily \doxylink{classbudzet_1_1rdzen_1_1_mened_xC5_xBCer_bud_xC5_xBCetu}{Menedżer\+Budżetu}}). 
+
+\label{doc-func-members}
+\Hypertarget{classbudzet_1_1raporty_1_1_fabryka_raport_xC3_xB3w_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classbudzet_1_1raporty_1_1_fabryka_raport_xC3_xB3w_a90d38487ccdff95feee0ab497f71dd91}\index{budzet.raporty.FabrykaRaportów@{budzet.raporty.FabrykaRaportów}!utwórzRaport@{utwórzRaport}}
+\index{utwórzRaport@{utwórzRaport}!budzet.raporty.FabrykaRaportów@{budzet.raporty.FabrykaRaportów}}
+\doxysubsubsection{\texorpdfstring{utwórzRaport()}{utwórzRaport()}}
+{\footnotesize\ttfamily \label{classbudzet_1_1raporty_1_1_fabryka_raport_xC3_xB3w_a90d38487ccdff95feee0ab497f71dd91} 
+\doxymbox{\hyperlink{classbudzet_1_1raporty_1_1_raport}{Raport}} budzet.\+raporty.\+Fabryka\+Raportów.\+utwórz\+Raport (\begin{DoxyParamCaption}\item[{String}]{typ}{, }\item[{String...}]{parametry}{}\end{DoxyParamCaption})}
+
+
+
+Tworzy raport na podstawie typu podanego przez użytkownika. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em typ} & nazwa typu raportu (np. "{}miesięczny"{}, "{}kategorii"{}). \\
+\hline
+{\em parametry} & dodatkowe parametry zależne od typu (np. nazwa kategorii). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+gotowy obiekt raportu. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Illegal\+Argument\+Exception} & gdy podano nieznany typ lub brakuje parametrów. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Projekt/\+src/\+main/\+java/\+budzet/\+raporty/\+Fabryka\+Raportów.\+java\end{DoxyCompactItemize}

@@ -1,0 +1,51 @@
+\doxysection{budzet.\+rdzen.\+Budżet Class Reference}
+\hypertarget{classbudzet_1_1rdzen_1_1_bud_xC5_xBCet}{}\label{classbudzet_1_1rdzen_1_1_bud_xC5_xBCet}\index{budzet.rdzen.Budżet@{budzet.rdzen.Budżet}}
+
+
+Model budżetu dla danej kategorii i okresu.  
+
+
+
+
+Collaboration diagram for budzet.\+rdzen.\+Budżet:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classbudzet_1_1rdzen_1_1_bud_xC5_xBCet__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classbudzet_1_1rdzen_1_1_bud_xC5_xBCet_a8f5f32f62b988f067711ce3008a1f165}\label{classbudzet_1_1rdzen_1_1_bud_xC5_xBCet_a8f5f32f62b988f067711ce3008a1f165} 
+{\bfseries Budżet} (\doxymbox{\hyperlink{classbudzet_1_1rdzen_1_1_kategoria}{Kategoria}} kategoria, double limit, String okres)
+\item 
+\Hypertarget{classbudzet_1_1rdzen_1_1_bud_xC5_xBCet_a3773a8962a589ad201051002dcd9647f}\label{classbudzet_1_1rdzen_1_1_bud_xC5_xBCet_a3773a8962a589ad201051002dcd9647f} 
+boolean {\bfseries czy\+Przekroczony} ()
+\item 
+\Hypertarget{classbudzet_1_1rdzen_1_1_bud_xC5_xBCet_a3a1b47835371b596b7a327c982e13692}\label{classbudzet_1_1rdzen_1_1_bud_xC5_xBCet_a3a1b47835371b596b7a327c982e13692} 
+double {\bfseries get\+Aktualne\+Wydatki} ()
+\item 
+\Hypertarget{classbudzet_1_1rdzen_1_1_bud_xC5_xBCet_a493dfa7894ec9e358c066cb46e2305ea}\label{classbudzet_1_1rdzen_1_1_bud_xC5_xBCet_a493dfa7894ec9e358c066cb46e2305ea} 
+\doxymbox{\hyperlink{classbudzet_1_1rdzen_1_1_kategoria}{Kategoria}} {\bfseries get\+Kategoria} ()
+\item 
+\Hypertarget{classbudzet_1_1rdzen_1_1_bud_xC5_xBCet_ab8ebd39a62a6ec22b98196e9cffa09c7}\label{classbudzet_1_1rdzen_1_1_bud_xC5_xBCet_ab8ebd39a62a6ec22b98196e9cffa09c7} 
+double {\bfseries get\+Limit} ()
+\item 
+\Hypertarget{classbudzet_1_1rdzen_1_1_bud_xC5_xBCet_ad71835295f8d6aeefe53dba41e74e6a7}\label{classbudzet_1_1rdzen_1_1_bud_xC5_xBCet_ad71835295f8d6aeefe53dba41e74e6a7} 
+String {\bfseries get\+Okres} ()
+\item 
+\Hypertarget{classbudzet_1_1rdzen_1_1_bud_xC5_xBCet_a1ac827d36d43f6cf20513cd6ee9d8478}\label{classbudzet_1_1rdzen_1_1_bud_xC5_xBCet_a1ac827d36d43f6cf20513cd6ee9d8478} 
+void {\bfseries set\+Transakcje} (List$<$ \doxymbox{\hyperlink{classbudzet_1_1rdzen_1_1_transakcja}{Transakcja}} $>$ transakcje)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Model budżetu dla danej kategorii i okresu. 
+
+Przechowuje limit oraz listę transakcji przypisanych do kategorii; umożliwia sprawdzenie, czy limit został przekroczony. Wzorzec Obserwator przekazuje instancję budżetu do obserwatorów jako „stan” (wzorzec\+\_\+observer). 
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Projekt/\+src/\+main/\+java/\+budzet/\+rdzen/\+Budżet.\+java\end{DoxyCompactItemize}

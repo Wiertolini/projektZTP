@@ -1,0 +1,103 @@
+\chapter{Projekt ZTP – System Zarządzania Budżetem Domowym }
+\hypertarget{index}{}\label{index}\index{Projekt ZTP – System Zarządzania Budżetem Domowym@{Projekt ZTP – System Zarządzania Budżetem Domowym}}
+\label{index_md_docs_2mainpage}%
+\Hypertarget{index_md_docs_2mainpage}%
+ 📊 Projekt ZTP – System Zarządzania Budżetem Domowym
+
+🎯 Cel projektu Celem projektu jest stworzenie konsolowej aplikacji do zarządzania budżetem domowym, która umożliwia:\+
+
+
+\begin{DoxyItemize}
+\item ewidencjonowanie przychodów i wydatków,
+\item analizę danych finansowych,
+\item prognozowanie przyszłych kosztów,
+\item generowanie raportów,
+\item eksport danych do plików CSV,
+\item automatyczne reagowanie na zmiany stanu budżetu.
+\end{DoxyItemize}
+
+🧩 Zastosowane wzorce projektowe W projekcie wykorzystano następujące wzorce:\+
+
+🔹 Obserwator ~\newline
+ Cel:\+ automatyczne powiadamianie o zmianach stanu budżetu ~\newline
+ Przykład:\+ informowanie o przekroczeniu limitu wydatków ~\newline
+ Pakiet:\+ obserwatorzy
+
+🔹 Strategia ~\newline
+ Cel:\+ możliwość wyboru algorytmu prognozowania w czasie działania programu ~\newline
+ Pakiet:\+ prognozy
+
+🔹 Fabryka ~\newline
+ Cel:\+ centralizacja procesu tworzenia raportów ~\newline
+ Pakiet:\+ raporty
+
+🔹 Adapter ~\newline
+ Cel:\+ integracja zewnętrznej biblioteki zapisu CSV z interfejsem systemu ~\newline
+ Pakiet:\+ eksport
+
+🗂 Struktura projektu 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{projekt/}
+\DoxyCodeLine{├──\ rdzen/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ logika\ domenowa\ (budżet,\ transakcje)}
+\DoxyCodeLine{├──\ obserwatorzy/\ \ \ \ \ \ \ \#\ wzorzec\ Obserwator}
+\DoxyCodeLine{├──\ prognozy/\ \ \ \ \ \ \ \ \ \ \ \#\ wzorzec\ Strategia}
+\DoxyCodeLine{├──\ raporty/\ \ \ \ \ \ \ \ \ \ \ \ \#\ wzorzec\ Fabryka}
+\DoxyCodeLine{├──\ eksport/\ \ \ \ \ \ \ \ \ \ \ \ \#\ wzorzec\ Adapter}
+\DoxyCodeLine{├──\ docs/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ dokumentacja\ projektu}
+\DoxyCodeLine{└──\ InterfejsKonsolowy.java}
+
+\end{DoxyCode}
+
+
+▶️ Uruchomienie projektu
+
+Wymagania
+\begin{DoxyItemize}
+\item Java JDK 17 lub nowsza
+\end{DoxyItemize}
+
+Kompilacja 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{javac\ *.java}
+
+\end{DoxyCode}
+
+
+Uruchomienie 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{java\ InterfejsKonsolowy}
+
+\end{DoxyCode}
+
+
+Projekt nie wymaga zewnętrznych bibliotek.
+
+👤 Instrukcja użytkownika (skrót) Aplikacja działa w trybie konsolowym i oferuje menu tekstowe umożliwiające:\+
+
+
+\begin{DoxyItemize}
+\item dodawanie transakcji,
+\item przypisywanie kategorii,
+\item generowanie raportów,
+\item wykonywanie prognoz,
+\item eksport danych do CSV.
+\end{DoxyItemize}
+
+Obsługa programu odbywa się poprzez wybór odpowiednich opcji menu.
+
+👥 Podział pracy w zespole Karol Ziemak-\/ Rdzeń Systemu ~\newline
+ Jakub Wierciszewski -\/ eksport + dokumentacja ~\newline
+ Michał Szwabowicz-\/ Prognozy ~\newline
+ Szymon Duchnowski-\/ Raporty + obserwatorzy + dokumentacja ~\newline
+
+
+📄 Dokumentacja Szczegółowa dokumentacja projektu znajduje się w katalogu docs/\+ i obejmuje:\+
+
+
+\begin{DoxyItemize}
+\item opis wzorców projektowych,
+\item diagramy UML,
+\item instrukcję użytkownika i instalacji.
+\end{DoxyItemize}
+
+{\bfseries{Hierarchia klas generowana automatycznie przez Doxygena została pominięta, ponieważ diagram UML przedstawia pełniejszą strukturę relacji między klasami uczestniczącymi w zastosowanych wzorcach projektowych.}} 

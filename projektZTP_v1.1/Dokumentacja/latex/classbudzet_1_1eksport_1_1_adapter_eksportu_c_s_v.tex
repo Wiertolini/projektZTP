@@ -1,0 +1,73 @@
+\doxysection{budzet.\+eksport.\+Adapter\+Eksportu\+CSV Class Reference}
+\hypertarget{classbudzet_1_1eksport_1_1_adapter_eksportu_c_s_v}{}\label{classbudzet_1_1eksport_1_1_adapter_eksportu_c_s_v}\index{budzet.eksport.AdapterEksportuCSV@{budzet.eksport.AdapterEksportuCSV}}
+
+
+Adapter eksportu transakcji do formatu CSV.  
+
+
+
+
+Inheritance diagram for budzet.\+eksport.\+Adapter\+Eksportu\+CSV:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{classbudzet_1_1eksport_1_1_adapter_eksportu_c_s_v__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for budzet.\+eksport.\+Adapter\+Eksportu\+CSV:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{classbudzet_1_1eksport_1_1_adapter_eksportu_c_s_v__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{classbudzet_1_1eksport_1_1_adapter_eksportu_c_s_v_a522cc37cc435933a2788e865683c48fa}{eksportuj}} (List$<$ \doxymbox{\hyperlink{classbudzet_1_1rdzen_1_1_transakcja}{Transakcja}} $>$ transakcje)
+\begin{DoxyCompactList}\small\item\em Eksportuje listę transakcji do pliku CSV. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Adapter eksportu transakcji do formatu CSV. 
+
+Realizuje wzorzec Adapter (wzorzec\+\_\+adapter):\+
+\begin{DoxyItemize}
+\item Target:\+ {\ttfamily \doxylink{interfacebudzet_1_1eksport_1_1_interfejs_eksportu_c_s_v}{Interfejs\+Eksportu\+CSV}} 
+\item Adapter:\+ {\ttfamily \doxylink{classbudzet_1_1eksport_1_1_adapter_eksportu_c_s_v}{Adapter\+Eksportu\+CSV}} 
+\item Adaptee:\+ {\ttfamily \doxylink{classbudzet_1_1eksport_1_1_biblioteka_zapisujaca}{Biblioteka\+Zapisujaca}} 
+\end{DoxyItemize}
+
+Adapter buduje zawartość CSV na podstawie listy transakcji i deleguje zapis do {\ttfamily \doxylink{classbudzet_1_1eksport_1_1_biblioteka_zapisujaca}{Biblioteka\+Zapisujaca}}. 
+
+\label{doc-func-members}
+\Hypertarget{classbudzet_1_1eksport_1_1_adapter_eksportu_c_s_v_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classbudzet_1_1eksport_1_1_adapter_eksportu_c_s_v_a522cc37cc435933a2788e865683c48fa}\index{budzet.eksport.AdapterEksportuCSV@{budzet.eksport.AdapterEksportuCSV}!eksportuj@{eksportuj}}
+\index{eksportuj@{eksportuj}!budzet.eksport.AdapterEksportuCSV@{budzet.eksport.AdapterEksportuCSV}}
+\doxysubsubsection{\texorpdfstring{eksportuj()}{eksportuj()}}
+{\footnotesize\ttfamily \label{classbudzet_1_1eksport_1_1_adapter_eksportu_c_s_v_a522cc37cc435933a2788e865683c48fa} 
+void budzet.\+eksport.\+Adapter\+Eksportu\+CSV.\+eksportuj (\begin{DoxyParamCaption}\item[{List$<$ \doxymbox{\hyperlink{classbudzet_1_1rdzen_1_1_transakcja}{Transakcja}} $>$}]{transakcje}{}\end{DoxyParamCaption})}
+
+
+
+Eksportuje listę transakcji do pliku CSV. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transakcje} & lista transakcji do zapisania. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \doxymbox{\hyperlink{interfacebudzet_1_1eksport_1_1_interfejs_eksportu_c_s_v}{budzet.\+eksport.\+Interfejs\+Eksportu\+CSV}}.
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Projekt/\+src/\+main/\+java/\+budzet/\+eksport/\+Adapter\+Eksportu\+CSV.\+java\end{DoxyCompactItemize}

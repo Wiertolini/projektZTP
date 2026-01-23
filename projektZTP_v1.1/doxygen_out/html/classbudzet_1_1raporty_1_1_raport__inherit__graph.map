@@ -1,0 +1,7 @@
+<map id="budzet.raporty.Raport" name="budzet.raporty.Raport">
+<area shape="rect" id="Node000001" title="Abstrakcyjna baza dla raportów." alt="" coords="113,5,303,112"/>
+<area shape="rect" id="Node000002" href="$classbudzet_1_1raporty_1_1_raport_kategorii.html" title="Raport wydatków dla konkretnej kategorii." alt="" coords="5,160,192,283"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,123,141,162,137,159,162,127"/>
+<area shape="rect" id="Node000003" href="$classbudzet_1_1raporty_1_1_raport_miesi_xC4_x99czny.html" title="Raport sumaryczny wydatków (miesięczny)." alt="" coords="216,168,418,275"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="253,122,285,169,279,168,251,127"/>
+</map>

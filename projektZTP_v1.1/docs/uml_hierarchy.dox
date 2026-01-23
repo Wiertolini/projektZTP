@@ -1,0 +1,7 @@
+/** 
+@page uml_hierarchy Diagram klas (UML) dla zastosowanych wzorców
+
+Poniższy diagram przedstawia klasy budujące użyte wzorce projektowe (z pominięciem elementów nieistotnych dla prezentacji wzorców, np. warstwy UI).
+
+@image html uml.png "Diagram UML" width=1000
+*/

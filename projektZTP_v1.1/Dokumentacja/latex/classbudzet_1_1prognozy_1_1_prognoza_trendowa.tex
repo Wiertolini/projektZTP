@@ -1,0 +1,88 @@
+\doxysection{budzet.\+prognozy.\+Prognoza\+Trendowa Class Reference}
+\hypertarget{classbudzet_1_1prognozy_1_1_prognoza_trendowa}{}\label{classbudzet_1_1prognozy_1_1_prognoza_trendowa}\index{budzet.prognozy.PrognozaTrendowa@{budzet.prognozy.PrognozaTrendowa}}
+
+
+Strategia prognozowania wydatków uwzględniająca trend z ostatnich transakcji.  
+
+
+
+
+Inheritance diagram for budzet.\+prognozy.\+Prognoza\+Trendowa:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classbudzet_1_1prognozy_1_1_prognoza_trendowa__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for budzet.\+prognozy.\+Prognoza\+Trendowa:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classbudzet_1_1prognozy_1_1_prognoza_trendowa__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \doxymbox{\hyperlink{classbudzet_1_1prognozy_1_1_prognoza_trendowa_aaaca58948338c2bb06a7d29c90a8b754}{prognozuj}} (List$<$ \doxymbox{\hyperlink{classbudzet_1_1rdzen_1_1_transakcja}{Transakcja}} $>$ transakcje)
+\begin{DoxyCompactList}\small\item\em Wylicza prognozowaną wartość wydatków na podstawie listy transakcji. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{classbudzet_1_1prognozy_1_1_prognoza_trendowa_aa7f892473b5f24fcc289ac22b19e05df}{get\+Nazwa\+Strategii}} ()
+\begin{DoxyCompactList}\small\item\em Zwraca nazwę strategii widoczną dla użytkownika. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Strategia prognozowania wydatków uwzględniająca trend z ostatnich transakcji. 
+
+Concrete\+Strategy we wzorcu Strategia (wzorzec\+\_\+strategy). 
+
+\label{doc-func-members}
+\Hypertarget{classbudzet_1_1prognozy_1_1_prognoza_trendowa_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classbudzet_1_1prognozy_1_1_prognoza_trendowa_aa7f892473b5f24fcc289ac22b19e05df}\index{budzet.prognozy.PrognozaTrendowa@{budzet.prognozy.PrognozaTrendowa}!getNazwaStrategii@{getNazwaStrategii}}
+\index{getNazwaStrategii@{getNazwaStrategii}!budzet.prognozy.PrognozaTrendowa@{budzet.prognozy.PrognozaTrendowa}}
+\doxysubsubsection{\texorpdfstring{getNazwaStrategii()}{getNazwaStrategii()}}
+{\footnotesize\ttfamily \label{classbudzet_1_1prognozy_1_1_prognoza_trendowa_aa7f892473b5f24fcc289ac22b19e05df} 
+String budzet.\+prognozy.\+Prognoza\+Trendowa.\+get\+Nazwa\+Strategii (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Zwraca nazwę strategii widoczną dla użytkownika. 
+
+\begin{DoxyReturn}{Returns}
+nazwa strategii. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{interfacebudzet_1_1prognozy_1_1_strategia_prognozy_acf6d1e30dab223c470a2bcce3ac1f787}{budzet.\+prognozy.\+Strategia\+Prognozy}}.
+
+\Hypertarget{classbudzet_1_1prognozy_1_1_prognoza_trendowa_aaaca58948338c2bb06a7d29c90a8b754}\index{budzet.prognozy.PrognozaTrendowa@{budzet.prognozy.PrognozaTrendowa}!prognozuj@{prognozuj}}
+\index{prognozuj@{prognozuj}!budzet.prognozy.PrognozaTrendowa@{budzet.prognozy.PrognozaTrendowa}}
+\doxysubsubsection{\texorpdfstring{prognozuj()}{prognozuj()}}
+{\footnotesize\ttfamily \label{classbudzet_1_1prognozy_1_1_prognoza_trendowa_aaaca58948338c2bb06a7d29c90a8b754} 
+double budzet.\+prognozy.\+Prognoza\+Trendowa.\+prognozuj (\begin{DoxyParamCaption}\item[{List$<$ \doxymbox{\hyperlink{classbudzet_1_1rdzen_1_1_transakcja}{Transakcja}} $>$}]{transakcje}{}\end{DoxyParamCaption})}
+
+
+
+Wylicza prognozowaną wartość wydatków na podstawie listy transakcji. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transakcje} & lista transakcji historycznych. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+prognozowana kwota wydatków. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{interfacebudzet_1_1prognozy_1_1_strategia_prognozy_ac3fade8077a174bf6f81856112068ea9}{budzet.\+prognozy.\+Strategia\+Prognozy}}.
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Projekt/\+src/\+main/\+java/\+budzet/\+prognozy/\+Prognoza\+Trendowa.\+java\end{DoxyCompactItemize}

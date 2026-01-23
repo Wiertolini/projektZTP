@@ -1,0 +1,88 @@
+\doxysection{budzet.\+prognozy.\+Średnia\+Prosta\+Prognoza Class Reference}
+\hypertarget{classbudzet_1_1prognozy_1_1_xC5_x9Arednia_prosta_prognoza}{}\label{classbudzet_1_1prognozy_1_1_xC5_x9Arednia_prosta_prognoza}\index{budzet.prognozy.ŚredniaProstaPrognoza@{budzet.prognozy.ŚredniaProstaPrognoza}}
+
+
+Strategia prognozowania oparta o średnią arytmetyczną wydatków.  
+
+
+
+
+Inheritance diagram for budzet.\+prognozy.\+Średnia\+Prosta\+Prognoza:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classbudzet_1_1prognozy_1_1_xC5_x9Arednia_prosta_prognoza__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for budzet.\+prognozy.\+Średnia\+Prosta\+Prognoza:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classbudzet_1_1prognozy_1_1_xC5_x9Arednia_prosta_prognoza__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \doxymbox{\hyperlink{classbudzet_1_1prognozy_1_1_xC5_x9Arednia_prosta_prognoza_afebebb0ce8c1f7acc62078734520256a}{prognozuj}} (List$<$ \doxymbox{\hyperlink{classbudzet_1_1rdzen_1_1_transakcja}{Transakcja}} $>$ transakcje)
+\begin{DoxyCompactList}\small\item\em Wylicza prognozowaną wartość wydatków na podstawie listy transakcji. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{classbudzet_1_1prognozy_1_1_xC5_x9Arednia_prosta_prognoza_ae0c749caba9642ce421b2fc7b981a1e2}{get\+Nazwa\+Strategii}} ()
+\begin{DoxyCompactList}\small\item\em Zwraca nazwę strategii widoczną dla użytkownika. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Strategia prognozowania oparta o średnią arytmetyczną wydatków. 
+
+Concrete\+Strategy we wzorcu Strategia (wzorzec\+\_\+strategy). 
+
+\label{doc-func-members}
+\Hypertarget{classbudzet_1_1prognozy_1_1_xC5_x9Arednia_prosta_prognoza_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classbudzet_1_1prognozy_1_1_xC5_x9Arednia_prosta_prognoza_ae0c749caba9642ce421b2fc7b981a1e2}\index{budzet.prognozy.ŚredniaProstaPrognoza@{budzet.prognozy.ŚredniaProstaPrognoza}!getNazwaStrategii@{getNazwaStrategii}}
+\index{getNazwaStrategii@{getNazwaStrategii}!budzet.prognozy.ŚredniaProstaPrognoza@{budzet.prognozy.ŚredniaProstaPrognoza}}
+\doxysubsubsection{\texorpdfstring{getNazwaStrategii()}{getNazwaStrategii()}}
+{\footnotesize\ttfamily \label{classbudzet_1_1prognozy_1_1_xC5_x9Arednia_prosta_prognoza_ae0c749caba9642ce421b2fc7b981a1e2} 
+String budzet.\+prognozy.\+Średnia\+Prosta\+Prognoza.\+get\+Nazwa\+Strategii (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Zwraca nazwę strategii widoczną dla użytkownika. 
+
+\begin{DoxyReturn}{Returns}
+nazwa strategii. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{interfacebudzet_1_1prognozy_1_1_strategia_prognozy_acf6d1e30dab223c470a2bcce3ac1f787}{budzet.\+prognozy.\+Strategia\+Prognozy}}.
+
+\Hypertarget{classbudzet_1_1prognozy_1_1_xC5_x9Arednia_prosta_prognoza_afebebb0ce8c1f7acc62078734520256a}\index{budzet.prognozy.ŚredniaProstaPrognoza@{budzet.prognozy.ŚredniaProstaPrognoza}!prognozuj@{prognozuj}}
+\index{prognozuj@{prognozuj}!budzet.prognozy.ŚredniaProstaPrognoza@{budzet.prognozy.ŚredniaProstaPrognoza}}
+\doxysubsubsection{\texorpdfstring{prognozuj()}{prognozuj()}}
+{\footnotesize\ttfamily \label{classbudzet_1_1prognozy_1_1_xC5_x9Arednia_prosta_prognoza_afebebb0ce8c1f7acc62078734520256a} 
+double budzet.\+prognozy.\+Średnia\+Prosta\+Prognoza.\+prognozuj (\begin{DoxyParamCaption}\item[{List$<$ \doxymbox{\hyperlink{classbudzet_1_1rdzen_1_1_transakcja}{Transakcja}} $>$}]{transakcje}{}\end{DoxyParamCaption})}
+
+
+
+Wylicza prognozowaną wartość wydatków na podstawie listy transakcji. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transakcje} & lista transakcji historycznych. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+prognozowana kwota wydatków. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{interfacebudzet_1_1prognozy_1_1_strategia_prognozy_ac3fade8077a174bf6f81856112068ea9}{budzet.\+prognozy.\+Strategia\+Prognozy}}.
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Projekt/\+src/\+main/\+java/\+budzet/\+prognozy/\+Średnia\+Prosta\+Prognoza.\+java\end{DoxyCompactItemize}

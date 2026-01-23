@@ -1,0 +1,49 @@
+\doxysection{budzet.\+Interfejs\+Konsolowy Class Reference}
+\hypertarget{classbudzet_1_1_interfejs_konsolowy}{}\label{classbudzet_1_1_interfejs_konsolowy}\index{budzet.InterfejsKonsolowy@{budzet.InterfejsKonsolowy}}
+
+
+Konsolowy interfejs użytkownika aplikacji „\+Budżet domowy”.  
+
+
+
+
+Collaboration diagram for budzet.\+Interfejs\+Konsolowy:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{classbudzet_1_1_interfejs_konsolowy__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classbudzet_1_1_interfejs_konsolowy_a262d0ebec8886e8968812982a419c173}\label{classbudzet_1_1_interfejs_konsolowy_a262d0ebec8886e8968812982a419c173} 
+static void {\bfseries main} (String\+[$\,$]\+ args)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Konsolowy interfejs użytkownika aplikacji „\+Budżet domowy”. 
+
+Klasa stanowi punkt wejścia programu (metoda {\ttfamily main}) i udostępnia menu do:\+
+\begin{DoxyItemize}
+\item zarządzania transakcjami (przychody/\+wydatki),
+\item ustawiania budżetów i limitów,
+\item generowania raportów,
+\item uruchamiania prognoz,
+\item eksportu danych do CSV.
+\end{DoxyItemize}
+
+W tej klasie widoczne jest użycie kilku wzorców:\+
+\begin{DoxyItemize}
+\item Singleton:\+ pobranie instancji {\ttfamily \doxylink{classbudzet_1_1rdzen_1_1_mened_xC5_xBCer_bud_xC5_xBCetu}{Menedżer\+Budżetu}} (wzorzec\+\_\+singleton),
+\item Fabryka raportów:\+ tworzenie obiektów raportów (wzorzec\+\_\+factory),
+\item Strategia prognoz:\+ wybór algorytmu prognozy (wzorzec\+\_\+strategy),
+\item Adapter eksportu:\+ eksport do CSV (wzorzec\+\_\+adapter),
+\item Obserwator:\+ rejestracja powiadomień o przekroczeniu limitu (wzorzec\+\_\+observer). 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Projekt/\+src/\+main/\+java/\+budzet/\+Interfejs\+Konsolowy.\+java\end{DoxyCompactItemize}

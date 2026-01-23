@@ -1,0 +1,5 @@
+<map id="budzet.eksport.AdapterEksportuCSV" name="budzet.eksport.AdapterEksportuCSV">
+<area shape="rect" id="Node000001" title="Adapter eksportu transakcji do formatu CSV." alt="" coords="5,155,231,261"/>
+<area shape="rect" id="Node000002" href="$interfacebudzet_1_1eksport_1_1_interfejs_eksportu_c_s_v.html" title="Interfejs eksportu transakcji do CSV." alt="" coords="29,5,208,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,120,121,156,116,154,117,124"/>
+</map>
